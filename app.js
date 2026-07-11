@@ -201,3 +201,4 @@ document.querySelectorAll('#customerName, #customerNameLead').forEach(el=>{el.te
 document.querySelectorAll('.segmented button').forEach(b=>b.addEventListener('click',()=>{valueBasis=b.dataset.basis;document.querySelectorAll('.segmented button').forEach(button=>button.classList.toggle('active',button===b));projectionChart();netCashChart()}));
 document.querySelector('#clearBrush').addEventListener('click',()=>{brushedIds=new Set(policies.map(p=>p.id));renderLinked()});
 metricStrip(); faces(); scatter(); radar(); coverageBars(); projectionChart(); netCashChart(); cashCallout(); coverageMap(); recommendation();
+
