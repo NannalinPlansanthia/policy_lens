@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Policy Lens | Child Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark" aria-hidden="true"><span class="lens-ring"></span></span><span>Policy Lens</span></div>
+        <div class="scenario-pill"><span></span> Child education planning</div>
+        <div class="asof">Illustrative analysis<br /><strong>10 Jul 2026</strong></div>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Customer profile / 19 year horizon</p>
+          <h1><span id="customerName">Nisa</span>'s education plan,<br />with room to breathe.</h1>
+          <p class="lede">A caring view of today's budget and tomorrow's education goal, so <span id="customerNameLead">Nisa</span> can look after her child without losing sight of her own financial security.</p>
+        </div>
+        <div class="profile-grid" aria-label="Customer profile">
+          <div><span>Monthly income</span><strong>THB 60,000</strong></div>
+          <div><span>Monthly living costs</span><strong>THB 40,000</strong></div>
+          <div><span>Free cash flow</span><strong class="positive">THB 20,000</strong></div>
+          <div><span>Life need</span><strong>THB 5.0M</strong></div>
+        </div>
+      </section>
+
+      <section class="metric-strip" id="scenarioMetrics"></section>
+
+      <section class="section-head">
+        <div><p class="eyebrow">01 / Candidate overview</p><h2>A quick, friendly view of each policy</h2></div>
+        <p>Each face turns the five scores into an easy visual cue. Hover to see the details, or choose a policy to explore it below.</p>
+      </section>
+      <section class="face-section">
+        <div id="faceGrid" class="face-grid" aria-label="Policy Chernoff faces"></div>
+        <aside class="face-legend">
+          <p class="eyebrow">Face decoder</p>
+          <div><i class="feature sparkle"></i><span>Sparkles: overall fit</span></div>
+          <div><i class="feature eye"></i><span>Eyes: protection fit</span></div>
+          <div><i class="feature mouth"></i><span>Mouth: purpose alignment</span></div>
+          <div><i class="feature brow"></i><span>Brows: premium efficiency</span></div>
+          <div><i class="feature cheek"></i><span>Cheeks: flexibility</span></div>
+        </aside>
+      </section>
+
+      <section class="section-head linked-heading">
+        <div><p class="eyebrow">02 / Connected comparison</p><h2>Which plan feels right for Nisa?</h2></div>
+        <p>Drag across the dots to compare a group of plans. The score shape and protection bars will follow along; choose any mark for a closer look.</p>
+      </section>
+      <section class="compare-grid">
+        <article class="chart-panel scatter-panel">
+          <div class="panel-head"><div><h3>Monthly cost and overall fit</h3><p>Plans near the top-left are easier on spare cash and better suited to her needs.</p></div><button id="clearBrush" class="icon-button" title="Clear scatter selection" aria-label="Clear scatter selection">&times;</button></div>
+          <svg id="scatterChart" class="chart" viewBox="0 0 620 355" role="img" aria-label="Scatter plot of premium burden and overall suitability"></svg>
+        </article>
+        <article class="chart-panel radar-panel">
+          <div class="panel-head"><div><h3 id="radarTitle">How this policy supports Nisa</h3><p id="radarSubtitle">Choose a policy to see how it performs across the five needs.</p></div><span id="overallBadge" class="score-badge"></span></div>
+          <svg id="radarChart" class="chart" viewBox="0 0 470 355" role="img" aria-label="Radar chart of five policy scores"></svg>
+        </article>
+        <article class="chart-panel bar-panel">
+          <div class="panel-head"><div><h3>Nisa's life cover need</h3><p>A child-insured plan can help with education, but it does not protect Nisa's income.</p></div></div>
+          <svg id="coverageChart" class="chart" viewBox="0 0 520 355" role="img" aria-label="Bar chart comparing policy cover to needed coverage"></svg>
+        </article>
+      </section>
+
+      <section class="section-head">
+        <div><p class="eyebrow">03 / Family cash-flow runway</p><h2>Looking after Nisa's plan, year by year</h2></div>
+        <p>We compare what comes in with what needs to go out. Present value shows those future amounts in today's money.</p>
+      </section>
+      <section class="projection-grid">
+        <article class="chart-panel projection-panel">
+          <div class="panel-head">
+            <div><h3>Income and planned outgoings</h3><p id="projectionDetail">Education costs start when the child turns 7.</p></div>
+            <div class="segmented" aria-label="Projection value basis"><button class="active" data-basis="nominal">Nominal</button><button data-basis="pv">Present value</button></div>
+          </div>
+          <svg id="projectionChart" class="chart projection-chart" viewBox="0 0 920 276" role="img" aria-label="Line chart of projected income and planned outgoings"></svg>
+          <div class="net-chart-head"><span>Money left after living costs, education and policy premiums</span><span>Net cash flow</span></div>
+          <svg id="netCashChart" class="chart net-cash-chart" viewBox="0 0 920 145" role="img" aria-label="Area chart of annual net cash flow"></svg>
+        </article>
+        <aside class="cash-callout" id="cashCallout"></aside>
+      </section>
+
+      <section class="section-head">
+        <div><p class="eyebrow">04 / Protection map</p><h2>Nisa's protection today, and the care we can add</h2></div>
+        <p>Her accident cover is a helpful start. Together, we can gently build the life, education and retirement support her family still needs.</p>
+      </section>
+      <section class="upsell-grid">
+        <article class="chart-panel coverage-map"><div class="panel-head"><div><h3>What Nisa has today</h3><p>Her current policy provides personal accident cover only.</p></div></div><div id="coverageMap"></div></article>
+        <article class="recommendation" id="recommendation"></article>
+      </section>
+
+      <section class="method-note">
+        <p><strong>A gentle reminder:</strong> this is an early planning conversation, not a final insurance quotation. Premiums, cover amounts, investment returns and future policy values are working assumptions and should be confirmed in a personal illustration. Unit-linked values can move up or down.</p>
+        <p>The overall fit score gives the most weight to protection (30%) and affordable premiums (25%), followed by purpose alignment (20%), flexibility (15%) and value efficiency (10%). We assume income and living costs grow by 3% each year and use 5% to show present value.</p>
+      </section>
+    </main>
+    <div id="tooltip" class="tooltip" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
